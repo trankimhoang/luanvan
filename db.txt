@@ -1,0 +1,14 @@
+-Admin
+    + id
+    + name
+    + email
+    + password
+- Customer
+    + id
+    + name
+    + email
+    + password
+    + address
+    + phone
+
+
