@@ -12,3 +12,4 @@ npm-debug.log
 yarn-error.log
 .idea
 /public/category-product_images
+/public/product_images

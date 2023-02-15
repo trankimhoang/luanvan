@@ -21,3 +21,5 @@ Route::get('index', [\App\Http\Controllers\Admin\HomeController::class, 'index']
 Route::get('logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
 
 Route::resource('categoryProduct', 'Admin\CategoryProductController');
+
+Route::resource('products', 'Admin\ProductController');

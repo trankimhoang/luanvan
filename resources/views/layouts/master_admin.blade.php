@@ -79,7 +79,7 @@
                     <div class="collapse" id="collapseLayoutsCat" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{{ route('admin.categoryProduct.index') }}">Danh sách</a>
-                            <a class="nav-link" href="#">Thêm loại</a>
+                            <a class="nav-link" href="{{ route('admin.categoryProduct.create') }}">Thêm loại</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsProduct" aria-expanded="false" aria-controls="collapseLayouts">
@@ -89,8 +89,8 @@
                     </a>
                     <div class="collapse" id="collapseLayoutsProduct" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="#">Danh sách</a>
-                            <a class="nav-link" href="#">Thêm sản phẩm</a>
+                            <a class="nav-link" href="{{ route('admin.products.index') }}">Danh sách</a>
+                            <a class="nav-link" href="{{ route('admin.products.create') }}">Thêm sản phẩm</a>
                         </nav>
                     </div>
                 </div>
