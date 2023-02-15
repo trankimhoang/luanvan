@@ -17,3 +17,7 @@ Route::get('login', [\App\Http\Controllers\Admin\AuthController::class, 'showFor
 Route::post('login', [\App\Http\Controllers\Admin\AuthController::class, 'login'])->name('login.post');
 
 Route::get('index', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('index');
+
+Route::get('logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
+
+Route::resource('categoryProduct', 'Admin\CategoryProductController');

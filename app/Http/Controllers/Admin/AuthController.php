@@ -13,12 +13,20 @@ class AuthController extends Controller
     }
 
     public function login(LoginRequest $request){
-        $credentials = $request->only('email', 'password');
+        $email = $request->get('email');
+        $password = $request->get('password');
 
-        if (Auth::guard('admin')->attempt($credentials)) {
+        if (Auth::guard('admin')->attempt([
+            'email' => $email,
+            'password' => $password
+        ])){
             return redirect()->route('admin.index');
         }
+        return redirect()->back()->with('error', 'Email hoặc mật khẩu không đúng');
+    }
 
-        return redirect()->back()->withErrors(['error_login' => ('Đăng nhập thất bại')]);
+    public function logout(){
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin.login');
     }
 }
