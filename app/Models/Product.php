@@ -30,4 +30,8 @@ class Product extends Model
 
         return asset('images/not_found.jpg');
     }
+
+    public static function getLatestProducts($limit = 10) {
+        return Product::orderBy('created_at', 'desc')->take($limit)->get();
+    }
 }

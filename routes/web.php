@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('register', [\App\Http\Controllers\Web\AuthController::class, 'showFormRegister'])->name('register');
+Route::post('register', [\App\Http\Controllers\Web\AuthController::class, 'register'])->name('register.post');
+
+Route::get('login', [\App\Http\Controllers\Web\AuthController::class, 'showFormLogin'])->name('login');
+Route::post('login', [\App\Http\Controllers\Web\AuthController::class, 'login'])->name('login.post');
+
+Route::get('logout', [\App\Http\Controllers\Web\AuthController::class, 'logout'])->name('logout');
+
+Route::get('index', [\App\Http\Controllers\Web\HomeController::class, 'index'])->name('index');
+
+Route::get('detail/{id}', [\App\Http\Controllers\Web\ProductController::class, 'detail'])->name('detail');
+

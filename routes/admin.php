@@ -23,3 +23,5 @@ Route::get('logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout
 Route::resource('categoryProduct', 'Admin\CategoryProductController');
 
 Route::resource('products', 'Admin\ProductController');
+
+Route::resource('banners', 'Admin\BannerController');
